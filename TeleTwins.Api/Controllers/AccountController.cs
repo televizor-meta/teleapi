@@ -43,7 +43,7 @@ public class AccountController : ControllerBase
     [HttpGet("login")]
     public IActionResult Login() =>
         Redirect("https://tvscp.tionix.ru/realms/master/protocol/openid-connect/auth/" +
-                 "?response_type=code&client_id=tvscp&scope=openid"
+                 "?response_type=code&client_id=tvscp&scope=openid" +
                  $"&redirect_uri={Url.Action(nameof(SignInComplete), new { sid = _id })} ");
     
     [HttpGet("signinсomplete")]
