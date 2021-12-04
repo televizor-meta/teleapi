@@ -11,10 +11,10 @@ echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/
 sudo apt-get update
 sudo apt-get install -y kubectl
 ```
-![Image alt](https://github.com//televizor-meta/teleapi/1.jpg)
-![Image alt](https://github.com//televizor-meta/teleapi/2.jpg)
-![Image alt](https://github.com//televizor-meta/teleapi/3.jpg)
-![Image alt](https://github.com//televizor-meta/teleapi/4.jpg)
+![Image alt](https://github.com/televizor-meta/teleapi/blob/main/1.jpg)
+![Image alt](https://github.com/televizor-meta/teleapi/blob/main/2.jpg)
+![Image alt](https://github.com/televizor-meta/teleapi/blob/main/3.jpg)
+![Image alt](https://github.com/televizor-meta/teleapi/blob/main/4.jpg)
 ------------------
 
 ### Создание директории по умолчанию и конфиг-файла kubernetes ###
