@@ -41,25 +41,27 @@ public class AccountController : ControllerBase
     }
 
     // TODO: Implement normal OpenId authentication/registration on client
-    // [HttpGet("login")]
-    // public IActionResult Login() =>
-    //     Redirect("https://tvscp.tionix.ru/realms/master/protocol/openid-connect/auth/" +
-    //              "?response_type=code&client_id=tvscp&scope=openid" +
-    //              $"&redirect_uri={Url.Action(nameof(SignInComplete), new { sid = _id })} ");
-    //
-    // [HttpGet("signinсomplete")]
-    // public Task<IActionResult> SignInComplete(string sid)
-    // {
-    //     return Task.FromResult(Ok() as IActionResult);
-    // }
-    //
-    // [HttpGet]
-    // public Task<IActionResult> GetAccessToken(string sid)
-    // {
-    //     return null;
-    // }
-    //
-    // [Authorize]
-    // [HttpGet("check-it")]
-    // public Task<IActionResult> CheckIt() => Task.FromResult(Ok("It works!") as IActionResult);
+    [HttpGet("login")]
+    public IActionResult Login() =>
+        Redirect("https://tvscp.tionix.ru/realms/master/protocol/openid-connect/auth/" +
+                 "?response_type=code&client_id=tvscp&scope=openid" +
+                 $"&redirect_uri={Url.Action(nameof(SignInComplete), new {sid = _id})} ");
+    
+    [HttpGet("signinсomplete")]
+    public Task<IActionResult> SignInComplete(string sid)
+    {
+        throw new NotImplementedException();
+        // TODO: сохранить код для получения токена в БД, создать пользователя 
+    }
+    
+    [HttpGet]
+    public Task<IActionResult> GetAccessToken(string sid)
+    {
+        throw new NotImplementedException();
+        // TODO: получить access- и refresh-токены от TVS, сохранить в БД, отдать клиенту.
+    }
+    
+    [Authorize]
+    [HttpGet("check-it")]
+    public Task<IActionResult> CheckIt() => Task.FromResult(Ok("It works!") as IActionResult);
 }
