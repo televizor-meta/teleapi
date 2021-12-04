@@ -26,19 +26,19 @@ nano config
 chmod 777 config
 cd ../
 ```
-![Image alt](https://github.com//televizor-meta/teleapi/5.jpg)
+![Image alt](https://github.com/televizor-meta/teleapi/blob/main/5.jpg)
 ------------------
 
 ### Проверка работы ###
 ```bash
 kubectl cluster-info -n team4
 ```
-![Image alt](https://github.com//televizor-meta/teleapi/6.jpg)
+![Image alt](https://github.com/televizor-meta/teleapi/blob/main/6.jpg)
 
 ```bash
 kubectl describe quota
 ```
-![Image alt](https://github.com//televizor-meta/teleapi/7.jpg)
+![Image alt](https://github.com/televizor-meta/teleapi/blob/main/7.jpg)
 ------------------
 
 ### Запуск kubernetes ПОДа ###
@@ -46,18 +46,18 @@ kubectl describe quota
 ```bash
 kubectl run hadoop --image=vitek999/oil_spill_detector -n team4 --requests="cpu=2,memory=1G"
 ```
-![Image alt](https://github.com//televizor-meta/teleapi/8.jpg)
+![Image alt](https://github.com/televizor-meta/teleapi/blob/main/8.jpg)
 
 ### Expose порта и запуск сервиса ###
 ```bash
 expose pod hadoop --port 8080 --type=NodePort -n team4
 ```
-![Image alt](https://github.com//televizor-meta/teleapi/9.jpg)
+![Image alt](https://github.com/televizor-meta/teleapi/blob/main/9.jpg)
 
 ### Проверка работы сервиса ###
 ```bash
 kubectl get services -n team4
 ```
-![Image alt](https://github.com//televizor-meta/teleapi/10.jpg)
+![Image alt](https://github.com/televizor-meta/teleapi/blob/main/10.jpg)
 
 
