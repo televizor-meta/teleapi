@@ -1,7 +1,11 @@
 using Microsoft.OpenApi.Models;
 using Rostelecom.DigitalProfile.Api.Authentication;
+using TeleTwins.DataWarehouse;
 using TeleTwins.Integrations.Tvs;
 using TeleTwins.Twin;
+using TeleTwins.Twins;
+using TeleTwins.Twins.AlienAccess;
+using TeleTwins.Twins.Publications;
 
 var builder = WebApplication.CreateBuilder(args);
 var authOptions = new TvsAuthenticationOptions();
@@ -18,6 +22,9 @@ builder.Services.AddSingleton(authOptions);
 builder.Services.AddScoped<ITvsLoginService, TvsClient>();
 builder.Services.AddScoped<ITvsUserProvider, TvsClient>();
 builder.Services.AddScoped<ITwinProvider, TwinProvider>();
+builder.Services.AddScoped<ITwinPublicationProvider, TwinPublicationProvider>();
+builder.Services.AddScoped<IDataWarehouse, DataWarehouse>();
+builder.Services.AddScoped<ITwinAlienAccessService, TwinAlienAccessService>();
 builder.Services.AddControllers();
 
 builder.Services.AddSwaggerGen(options =>

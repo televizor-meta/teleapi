@@ -14,11 +14,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\TeleTwins.DataWarehouse\TeleTwins.DataWarehouse.csproj" />
       <ProjectReference Include="..\TeleTwins.Integrations.Tvs\TeleTwins.Integrations.Tvs.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Providers" />
     </ItemGroup>
 
 </Project>

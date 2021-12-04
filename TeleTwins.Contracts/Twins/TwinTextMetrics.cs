@@ -1,4 +1,4 @@
-namespace TeleTwins.Twin;
+namespace TeleTwins.Twins;
 
 public class TwinTextMetrics
 {

@@ -1,4 +1,4 @@
-namespace TeleTwins.Api;
+namespace TeleTwins;
 
 public static class HttpContextExtensions
 {
